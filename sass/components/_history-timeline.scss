@@ -1,0 +1,65 @@
+.history-timeline {
+    display: flex;
+    max-width: 100%;
+
+    @include absoluteCenter;
+
+    &__element {
+        position: relative;
+        width: $history-schema-width;
+        background: white;
+
+        &--content {
+            position: absolute;
+            width: 100%;
+            height: $history-schema-height;
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+        
+            &-odd {
+                margin: 0 0 5rem 0;
+                bottom: 100%;
+        
+            }
+        
+            &-even {
+                margin: 5rem 0 0 0;
+                top: 100%;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border: $history-schema-border solid black;
+            border-radius: 50%;
+            background: white;
+            height: $history-schema-doth;
+            width: $history-schema-doth;
+            left: calc((#{$history-schema-width} / 2) - (#{$history-schema-doth} / 2));
+        }
+
+        &:nth-child(even) {
+            border-top: $history-schema-border solid black;
+
+            &:before {
+                top: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
+            }
+
+        }
+    
+        &:nth-child(odd) {
+            border-bottom: $history-schema-border solid black;
+
+            &:before {
+                bottom: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
+            }
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+}
