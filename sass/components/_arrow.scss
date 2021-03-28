@@ -1,0 +1,36 @@
+.arrow {
+    width: 0; 
+    height: 0;
+
+    &--up {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: $arrow-size solid transparent;
+        border-right: $arrow-size solid transparent;
+        border-bottom: $arrow-size solid white;
+    }
+
+    &--down {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: $arrow-size solid transparent;
+        border-right: $arrow-size solid transparent;
+        border-top: $arrow-size solid white;
+    }
+
+    &--left {
+        border-top: $arrow-size solid transparent;
+        border-bottom: $arrow-size solid transparent;
+        border-right: $arrow-size solid white;
+    }
+
+    &--right {
+        border-top: $arrow-size solid transparent;
+        border-bottom: $arrow-size solid transparent;
+        border-left: $arrow-size solid white;
+    }
+}

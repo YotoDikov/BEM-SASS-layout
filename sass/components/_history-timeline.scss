@@ -1,6 +1,6 @@
 .history-timeline {
     display: flex;
-    max-width: 100%;
+    max-width: 80%;
 
     @include absoluteCenter;
 
@@ -12,19 +12,19 @@
         &--content {
             position: absolute;
             width: 100%;
-            height: $history-schema-height;
+            // height: $history-schema-height;
+            height: 20rem;
             background: white;
             border-radius: 1rem;
             padding: 1rem;
         
             &-odd {
-                margin: 0 0 5rem 0;
+                margin: 0 0 6rem 0;
                 bottom: 100%;
-        
             }
         
             &-even {
-                margin: 5rem 0 0 0;
+                margin: 6rem 0 0 0;
                 top: 100%;
             }
         }
@@ -33,16 +33,17 @@
             position: absolute;
             display: block;
             content: "";
-            border: $history-schema-border solid black;
+            border: $history-schema-border solid $history-schema-color;
             border-radius: 50%;
             background: white;
             height: $history-schema-doth;
             width: $history-schema-doth;
-            left: calc((#{$history-schema-width} / 2) - (#{$history-schema-doth} / 2));
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         &:nth-child(even) {
-            border-top: $history-schema-border solid black;
+            border-top: $history-schema-border solid $history-schema-color;
 
             &:before {
                 top: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
@@ -51,7 +52,7 @@
         }
     
         &:nth-child(odd) {
-            border-bottom: $history-schema-border solid black;
+            border-bottom: $history-schema-border solid $history-schema-color;
 
             &:before {
                 bottom: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
@@ -63,3 +64,4 @@
         }
     }
 }
+
