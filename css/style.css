@@ -171,7 +171,7 @@ li {
 
 .history-timeline {
   display: flex;
-  max-width: 80%;
+  max-width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -212,6 +212,9 @@ li {
       border-bottom: 6px solid black; }
       .history-timeline__element:nth-child(odd):before {
         bottom: calc(((3rem / 2) + (6px / 2)) * -1); }
+    .history-timeline__element:nth-child(3) .history-timeline__element--content {
+      transform: scale(1.2);
+      margin: 0 0 8rem 0; }
     .history-timeline__element:first-child {
       border-left: none; }
 
@@ -243,11 +246,18 @@ li {
     border-bottom: 3rem solid transparent;
     border-left: 3rem solid white; }
 
+.shadow-container-block {
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 2px 6px 4px rgba(71, 71, 71, 0.6);
+  z-index: 200; }
+
 .header {
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../img/space-header-background.jpg");
   background-size: cover;
-  background-position: top; }
+  background-position: top;
+  border-bottom: 1px solid #b4b4b4; }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -266,4 +276,4 @@ li {
   position: relative;
   max-width: 100%;
   height: 100vh;
-  background-color: #494949; }
+  background-color: #e0dad1; }
