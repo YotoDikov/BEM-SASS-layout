@@ -1,18 +1,3 @@
-const data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-{/* <li class="timeline__block">
-    <div class="timeline__element timeline__element--odd">
-        <div class="arrow arrow--down"></div>
-        <p>TRGRG4G54GH54H54</p>
-    </div>
-</li>
-<li class="timeline__block">
-    <div class="timeline__element timeline__element--even">
-        <div class="arrow arrow--up"></div>
-        <p>TRGRG4G54GH54H54</p>
-    </div>
-</li> */}
-
 function getElementPosition(el) {
     const top = window.scrollY + el.getBoundingClientRect().top // Y
     const left = window.scrollX + el.getBoundingClientRect().left // X
@@ -38,8 +23,7 @@ function main () {
     const timeline = document.querySelector('.timeline');
 
 
-    document.getElementById("right").addEventListener('click', moveRight);
-    document.getElementById("left").addEventListener('click', moveLeft);
+  
 
     [...document.querySelectorAll('.timeline__element')]
     .map(el => {
@@ -47,39 +31,45 @@ function main () {
     });
 
    
-    function moveRight (e) {
-        timelineTranslatedX += Number(elementwidth);
-        timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+    // document.getElementById("right").addEventListener('click', moveRight);
+    // document.getElementById("left").addEventListener('click', moveLeft);
 
-        if(currentSelectedElement.classList.contains("timeline__element--selected")) {
-            currentSelectedElement.classList.remove("timeline__element--selected");
-        }
-    }
+    // function moveRight (e) {
+    //     timelineTranslatedX += Number(elementwidth);
+    //     timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
 
-    function moveLeft (e) {
-        timelineTranslatedX -= Number(elementwidth);
-        timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+    //     if(currentSelectedElement.classList.contains("timeline__element--selected")) {
+    //         currentSelectedElement.classList.remove("timeline__element--selected");
+    //     }
+    // }
 
-        if(currentSelectedElement.classList.contains("timeline__element--selected")) {
-            currentSelectedElement.classList.remove("timeline__element--selected");
-        }
-    }
+    // function moveLeft (e) {
+    //     timelineTranslatedX -= Number(elementwidth);
+    //     timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+
+    //     if(currentSelectedElement.classList.contains("timeline__element--selected")) {
+    //         currentSelectedElement.classList.remove("timeline__element--selected");
+    //     }
+    // }
 
     function selectTimeLineElement(e) {
-        moveTimeLine(e);
+
+        if(currentSelectedElement === e.currentTarget) return;
+
         if(currentSelectedElement === '') {
             e.currentTarget.classList.add("timeline__element--selected");
             currentSelectedElement = e.currentTarget;
+            moveTimeLine(e);
             return;
         }
 
         e.currentTarget.classList.add("timeline__element--selected");
         currentSelectedElement.classList.remove("timeline__element--selected");
         currentSelectedElement = e.currentTarget;
+        moveTimeLine(e);
     }
 
     function moveTimeLine(e) {
-
         const elementCenterPosition = getElementPosition(e.currentTarget).center;
         const distanceWindowCenterElementCenter = windowCenter - elementCenterPosition;
         timelineTranslatedX += Number(distanceWindowCenterElementCenter);

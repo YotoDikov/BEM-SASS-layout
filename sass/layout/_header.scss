@@ -7,7 +7,6 @@
         url('../img/space-header-background.jpg');
     background-size: cover;
     background-position: top;
-    border-bottom: 1px solid rgb(180, 180, 180);
     // clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     &__logo-box {
@@ -27,4 +26,41 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    
 }
+
+// .header__svg {
+//     position: absolute;
+//     background-color: transparent;
+
+//     &--1 {
+//         top: 90%;
+
+//         path {
+//             fill: rgb(139, 133, 123);
+//         }
+//     }
+
+//     &--2 {
+//         top: 90.5%;
+//         path {
+//             fill: rgb(160, 152, 139);
+//         }
+//     }
+
+//     &--3 {
+//         top: 91.5%;
+
+//         path {
+//             fill: rgb(202, 195, 184);
+//         }
+//     }
+
+//     &--4 {
+//         top: 93%;
+
+//         path {
+//             fill: rgb(224, 218, 209);
+//         }
+//     }
+// }

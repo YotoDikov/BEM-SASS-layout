@@ -2,9 +2,9 @@
 // $color-primary-light:  #dfdfdf;
 // $color-primary-dark: #949494;
 
-$color-primary: #ffffff;
-$color-primary-light:  #ffffff;
-$color-primary-dark: #000000;
+$color-primary: rgb(245, 234, 224);
+$color-primary-light:  rgb(224, 218, 209);
+$color-primary-dark: #1b1309;
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -32,9 +32,9 @@ $gutter-horizontal: 6rem;
 $history-schema-height: 30rem;
 $history-schema-width: 30rem;
 
-$history-schema-color: rgb(70, 69, 69);
+$history-schema-color: gray;
 $history-schema-border: 4px;
-$history-schema-doth: 3rem;
+$history-schema-doth: 2.4rem;
 
 $arrow-size: 3rem;
 

@@ -48,7 +48,7 @@ li {
     transform: translateY(0); } }
 
 .heading-primary {
-  color: #ffffff;
+  color: #f5eae0;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 5rem; }
@@ -75,7 +75,7 @@ li {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #ffffff, #000000);
+  background-image: linear-gradient(to right, #e0dad1, #1b1309);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
@@ -129,10 +129,10 @@ li {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: white;
+  background-color: #f5eae0;
   color: #777; }
   .btn--white::after {
-    background-color: white; }
+    background-color: #f5eae0; }
 
 .btn::after {
   content: "";
@@ -152,15 +152,15 @@ li {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #ffffff;
+  color: #f5eae0;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #f5eae0;
   padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
-  background-color: #ffffff;
+  background-color: #f5eae0;
   color: white;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -189,32 +189,51 @@ li {
     background: white; }
     .timeline__block--pointer {
       position: absolute;
-      border: 4px solid #464545;
+      border: 4px solid gray;
       border-radius: 1rem;
-      background: white;
-      height: 3rem;
-      width: 3rem;
+      background: #646464;
+      height: 2.4rem;
+      width: 2.4rem;
       left: 50%;
       transform: translateX(-50%); }
     .timeline__block:nth-child(even) {
-      border-top: 4px solid #464545; }
+      border-top: 4px solid gray; }
       .timeline__block:nth-child(even) .timeline__block--pointer {
-        top: calc(((3rem / 2) + (4px / 2)) * -1); }
+        top: calc(((2.4rem / 2) + (4px / 2)) * -1); }
     .timeline__block:nth-child(odd) {
-      border-bottom: 4px solid #464545; }
+      border-bottom: 4px solid gray; }
       .timeline__block:nth-child(odd) .timeline__block--pointer {
-        bottom: calc(((3rem / 2) + (4px / 2)) * -1); }
+        bottom: calc(((2.4rem / 2) + (4px / 2)) * -1); }
     .timeline__block:first-child {
       border-left: none; }
   .timeline__element {
     position: absolute;
     width: 100%;
     height: 20rem;
-    background: white;
-    border-radius: 1rem;
-    padding: 1rem;
+    background: #fdf7f2;
+    border-radius: 3rem;
+    padding: 2rem;
+    padding-left: 10rem;
+    overflow: hidden;
     transition: all 0.2s ease-in;
     cursor: pointer; }
+    .timeline__element--media {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden; }
+      .timeline__element--media img {
+        display: block;
+        height: 100%;
+        width: auto;
+        filter: sepia(100%);
+        opacity: 0.8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
     .timeline__element--odd {
       margin: 0 0 6rem 0;
       bottom: 100%; }
@@ -222,7 +241,7 @@ li {
       margin: 6rem 0 0 0;
       top: 100%; }
     .timeline__element--selected {
-      transform: scale(1.4);
+      transform: scale(1.3);
       margin: 10rem 0 10rem 0; }
 
 .arrow {
@@ -261,10 +280,9 @@ li {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)), url("../img/space-header-background.jpg");
+  background-image: linear-gradient(to right bottom, rgba(224, 218, 209, 0.8), rgba(27, 19, 9, 0.8)), url("../img/space-header-background.jpg");
   background-size: cover;
-  background-position: top;
-  border-bottom: 1px solid #b4b4b4; }
+  background-position: top; }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -283,4 +301,8 @@ li {
   position: relative;
   max-width: 100%;
   height: 100vh;
-  background-color: #e0dad1; }
+  background-image: linear-gradient(to right bottom, rgba(224, 218, 209, 0.95), rgba(224, 218, 209, 0.95)), url("../img/space-header-background.jpg");
+  background-size: cover;
+  background-position: top;
+  border-top: 6px solid gray;
+  overflow: hidden; }

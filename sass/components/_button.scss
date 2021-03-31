@@ -28,11 +28,11 @@
     }
     
     &--white {
-        background-color: $color-white;
+        background-color: $color-primary;
         color: $color-grey-dark;
 
         &::after {
-            background-color: $color-white;
+            background-color: $color-primary;
         }
     }
     

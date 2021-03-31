@@ -2,40 +2,14 @@
     position: relative;
     max-width: 100%;
     height: 100vh;
-    background-color: rgb(224, 218, 209);
+    // background-color: rgb(224, 218, 209);
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.95),
+        rgba($color-primary-light, 0.95)),
+        url('../img/space-header-background.jpg');
+    background-size: cover;
+    background-position: top;
+    border-top: 6px solid gray;
+    overflow: hidden;
 }
-
-
-
-// svg {
-//     display: inline-block;
-//     position: absolute;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     overflow: hidden;
-//     height: 100vh;
-//     background-image: linear-gradient(
-//         to right bottom,
-//         rgba($color-primary-light, 0.8),
-//         rgba($color-primary-dark, 0.8)),
-//         url('../img/space-header-background.jpg');
-//     background-size: cover;
-//     background-position: top;
-// }
-
-// path {
-//     background: blue;
-//     fill: brown;
-//     stroke: none;
-//     width: 100%;
-// }
-
-// .container {
-//     display: inline-block;
-//     position: relative;
-//     width: 100%;
-//     padding-bottom: 100%;
-//     vertical-align: middle;
-//     overflow: hidden;
-// }
