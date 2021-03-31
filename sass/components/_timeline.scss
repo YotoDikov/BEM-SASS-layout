@@ -1,27 +1,25 @@
 .timeline-wrapper {
     position: absolute;
-    width: 100%;
-    background: red;
+    width: 140%;
+    background: rgb(155, 155, 155);
     @include absoluteCenter;
-    overflow: visible;
 }
 
 .timeline {
     display: flex;
     max-width: 100%;
     position: relative;
+    transition: transform 0.6s ease-in-out;
 
     &__block {
         position: relative;
         width: 30rem;
         background: white;
 
-        &:before {
+        &--pointer {
             position: absolute;
-            display: block;
-            content: "";
             border: $history-schema-border solid $history-schema-color;
-            border-radius: 50%;
+            border-radius: 1rem;
             background: white;
             height: $history-schema-doth;
             width: $history-schema-doth;
@@ -32,15 +30,16 @@
         &:nth-child(even) {
             border-top: $history-schema-border solid $history-schema-color;
 
-            &:before {
+            .timeline__block--pointer {
                 top: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
             }
         }
     
         &:nth-child(odd) {
-            border-bottom: $history-schema-border solid $history-schema-color;
 
-            &:before {
+            border-bottom: $history-schema-border solid $history-schema-color;
+            
+            .timeline__block--pointer {
                 bottom: calc(((#{$history-schema-doth} / 2) + (#{$history-schema-border} / 2)) * -1);
             }
         }
@@ -58,6 +57,7 @@
         background: white;
         border-radius: 1rem;
         padding: 1rem;
+        transition: all 0.2s ease-in;
         cursor: pointer;
 
         &--odd {
@@ -71,9 +71,20 @@
         }
 
         &--selected {
-            transform: scale(1.2);
+            transform: scale(1.4);
             margin: 10rem 0 10rem 0;
         }
     }
 }
 
+// @keyframes moveTimeLine {
+//     0% { 
+//         transform: translateX($move-timeline-current-position)
+//     }
+//     // 50% { 
+//     //     transform: translateX()
+//     // }
+//     100% { 
+//         transform: translateX($move-timeline-next-position)
+//     }
+// }

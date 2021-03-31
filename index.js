@@ -13,42 +13,60 @@ const data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     </div>
 </li> */}
 
+function getElementPosition(el) {
+    const top = window.scrollY + el.getBoundingClientRect().top // Y
+    const left = window.scrollX + el.getBoundingClientRect().left // X
+    const center = (left + el.offsetWidth / 2);
+
+    return { 
+        top,
+        left,
+        center
+    };
+}
+
 function main () {
-
-    const timeline = document.querySelector('.timeline');
-    let timelineTranslatedX = 0;
-
-    let currentSelectedElement = '';
-    const elementwidth = document.querySelector('.timeline__element').offsetWidth;
     
+    const windowCenter = window.innerWidth / 2;
+    let timelineTranslatedX = 0;
+    let currentSelectedElement = '';
+    let currentSelectedPointer = '';
+
+    const blok = document.querySelector('.timeline__block');
+
+    const elementwidth = document.querySelector('.timeline__element').offsetWidth;
+    const timeline = document.querySelector('.timeline');
+
+
+    document.getElementById("right").addEventListener('click', moveRight);
+    document.getElementById("left").addEventListener('click', moveLeft);
+
     [...document.querySelectorAll('.timeline__element')]
     .map(el => {
         el.addEventListener('click', selectTimeLineElement);
     });
 
-    document.getElementById("right").addEventListener('click', moveRight);
-    document.getElementById("left").addEventListener('click', moveLeft);
-
    
-
-    console.log(elementwidth);
-
-   
-
     function moveRight (e) {
-        console.log('i am here');
         timelineTranslatedX += Number(elementwidth);
         timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+
+        if(currentSelectedElement.classList.contains("timeline__element--selected")) {
+            currentSelectedElement.classList.remove("timeline__element--selected");
+        }
     }
 
     function moveLeft (e) {
-        console.log('i am here');
         timelineTranslatedX -= Number(elementwidth);
         timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+
+        if(currentSelectedElement.classList.contains("timeline__element--selected")) {
+            currentSelectedElement.classList.remove("timeline__element--selected");
+        }
     }
 
     function selectTimeLineElement(e) {
-
+        moveTimeLine(e);
         if(currentSelectedElement === '') {
             e.currentTarget.classList.add("timeline__element--selected");
             currentSelectedElement = e.currentTarget;
@@ -59,7 +77,17 @@ function main () {
         currentSelectedElement.classList.remove("timeline__element--selected");
         currentSelectedElement = e.currentTarget;
     }
+
+    function moveTimeLine(e) {
+
+        const elementCenterPosition = getElementPosition(e.currentTarget).center;
+        const distanceWindowCenterElementCenter = windowCenter - elementCenterPosition;
+        timelineTranslatedX += Number(distanceWindowCenterElementCenter);
+
+        timeline.style.transform = `translateX(${timelineTranslatedX}px)`;
+    }
 }
+
 
 main();
 

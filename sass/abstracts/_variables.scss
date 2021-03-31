@@ -32,8 +32,11 @@ $gutter-horizontal: 6rem;
 $history-schema-height: 30rem;
 $history-schema-width: 30rem;
 
-$history-schema-color: rgb(0, 0, 0);
-$history-schema-border: 6px;
+$history-schema-color: rgb(70, 69, 69);
+$history-schema-border: 4px;
 $history-schema-doth: 3rem;
 
 $arrow-size: 3rem;
+
+$move-timeline-current-position: 0;
+$move-timeline-next-position: 0;
