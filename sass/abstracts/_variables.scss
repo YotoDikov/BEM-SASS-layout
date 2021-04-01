@@ -3,8 +3,12 @@
 // $color-primary-dark: #949494;
 
 $color-primary: rgb(245, 234, 224);
-$color-primary-light:  rgb(224, 218, 209);
+$color-primary-light:  rgb(207, 199, 186);
+$color-primary-average-light:  #be8e4f;
+$color-primary-average-average:  #a3632a;
+$color-primary-average-dark:  #423d38;
 $color-primary-dark: #1b1309;
+
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -32,8 +36,8 @@ $gutter-horizontal: 6rem;
 $history-schema-height: 30rem;
 $history-schema-width: 30rem;
 
-$history-schema-color: gray;
-$history-schema-border: 4px;
+$history-schema-color: #80766c;
+$history-schema-border: 6px;
 $history-schema-doth: 2.4rem;
 
 $arrow-size: 3rem;

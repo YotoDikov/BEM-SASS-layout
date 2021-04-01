@@ -2,7 +2,10 @@
     position: absolute;
     width: 140%;
     background: rgb(155, 155, 155);
-    @include absoluteCenter;
+    // @include absoluteCenter;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .timeline {
@@ -20,7 +23,7 @@
             position: absolute;
             border: $history-schema-border solid $history-schema-color;
             border-radius: 1rem;
-            background: rgb(100, 100, 100);
+            background:  $history-schema-color;
             height: $history-schema-doth;
             width: $history-schema-doth;
             left: 50%;
