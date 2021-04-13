@@ -41,3 +41,83 @@
         transform: translateY(0);
     }
 }
+
+@keyframes mercury {
+    0% { 
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(540deg);
+    }
+}
+
+@keyframes venus {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes earth {
+    0% { 
+        transform: translate(-50%, -50%) rotate(300deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(660deg);
+    }
+}
+
+@keyframes mars {
+    0% { 
+        transform: translate(-50%, -50%) rotate(140deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(500deg);
+    }
+}
+
+@keyframes jupiter {
+    0% { 
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(540deg);
+    }
+}
+
+@keyframes saturn {
+    0% { 
+        transform: translate(-50%, -50%) rotate(60deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(420deg);
+    }
+}
+@keyframes uranus {
+    0% { 
+        transform: translate(-50%, -50%) rotate(240deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(600deg);
+    }
+}
+
+@keyframes neptune {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes pluto {
+    from { 
+        transform: translate(-50%, -50%) rotate(120deg);
+    } 
+    to { 
+        transform: translate(-50%, -50%) rotate(480deg);
+    }
+}

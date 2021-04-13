@@ -19,6 +19,9 @@ body {
 li {
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -46,6 +49,60 @@ li {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+@keyframes mercury {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(540deg); } }
+
+@keyframes venus {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes earth {
+  0% {
+    transform: translate(-50%, -50%) rotate(300deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(660deg); } }
+
+@keyframes mars {
+  0% {
+    transform: translate(-50%, -50%) rotate(140deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(500deg); } }
+
+@keyframes jupiter {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(540deg); } }
+
+@keyframes saturn {
+  0% {
+    transform: translate(-50%, -50%) rotate(60deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(420deg); } }
+
+@keyframes uranus {
+  0% {
+    transform: translate(-50%, -50%) rotate(240deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(600deg); } }
+
+@keyframes neptune {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes pluto {
+  from {
+    transform: translate(-50%, -50%) rotate(120deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(480deg); } }
 
 .heading-primary {
   color: #f5eae0;
@@ -291,6 +348,122 @@ li {
   width: 100%;
   box-shadow: 0 2px 6px 4px rgba(71, 71, 71, 0.6);
   z-index: 200; }
+
+.solarsystem-container {
+  position: relative;
+  height: 78rem; }
+
+.solarsystem-wrapper {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: blue; }
+
+.solarsystem {
+  position: relative;
+  width: 100%; }
+  .solarsystem__planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    border: 1px solid white;
+    border-radius: 50%; }
+    .solarsystem__planet a {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%; }
+    .solarsystem__planet a > span {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, 0); }
+    .solarsystem__planet--sun {
+      width: 12rem;
+      height: 12rem;
+      border: none;
+      background: orangered; }
+    .solarsystem__planet--mercury {
+      width: calc(12rem * 2);
+      height: calc(12rem * 2);
+      animation: mercury 8s infinite linear; }
+      .solarsystem__planet--mercury a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--venus {
+      width: calc(12rem * 2.5);
+      height: calc(12rem * 2.5);
+      animation: venus 20s infinite linear; }
+      .solarsystem__planet--venus a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--earth {
+      width: calc(12rem * 3);
+      height: calc(12rem * 3);
+      animation: earth 34s infinite linear; }
+      .solarsystem__planet--earth a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--mars {
+      width: calc(12rem * 3.5);
+      height: calc(12rem * 3.5);
+      animation: mars 62s infinite linear; }
+      .solarsystem__planet--mars a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--jupiter {
+      width: calc(12rem * 4);
+      height: calc(12rem * 4);
+      animation: jupiter 80s infinite linear; }
+      .solarsystem__planet--jupiter a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--saturn {
+      width: calc(12rem * 4.5);
+      height: calc(12rem * 4.5);
+      animation: saturn 100s infinite linear; }
+      .solarsystem__planet--saturn a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--uranus {
+      width: calc(12rem * 5);
+      height: calc(12rem * 5);
+      animation: uranus 120s infinite linear; }
+      .solarsystem__planet--uranus a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--neptune {
+      width: calc(12rem * 5.5);
+      height: calc(12rem * 5.5);
+      animation: neptune 140s infinite linear; }
+      .solarsystem__planet--neptune a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
+    .solarsystem__planet--pluto {
+      width: calc(12rem * 6);
+      height: calc(12rem * 6);
+      animation: pluto 160s infinite linear;
+      transform: translate(-50%, -50%) rotate(100deg); }
+      .solarsystem__planet--pluto a > span {
+        width: 2rem;
+        height: 2rem;
+        background: blue; }
 
 .header {
   height: 100vh;

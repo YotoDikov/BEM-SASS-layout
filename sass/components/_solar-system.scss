@@ -1,0 +1,154 @@
+.solarsystem-container {
+    position: relative;
+    height: 78rem;
+}
+
+.solarsystem-wrapper {
+    position: absolute;
+    width: 100%;
+    @include absoluteCenter;
+    background: blue;
+}
+
+.solarsystem {
+    position: relative;
+    width: 100%;
+    
+    &__planet {
+        @include absoluteCenter;
+        display: block;
+        border: 1px solid white;
+        border-radius: 50%;
+
+        a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        a > span {
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            @include absoluteCenterLeft;
+        }
+
+        &--sun {
+            width: $planet-orbit-diameter;
+            height: $planet-orbit-diameter;
+            border: none;
+            background: orangered;
+
+        }
+
+        &--mercury {
+            width: calc(#{$planet-orbit-diameter} * 2);
+            height: calc(#{$planet-orbit-diameter} * 2);
+            animation: mercury 8s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--venus {
+            width: calc(#{$planet-orbit-diameter} * 2.5);
+            height: calc(#{$planet-orbit-diameter} * 2.5);
+            animation: venus 20s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--earth {
+            width: calc(#{$planet-orbit-diameter} * 3);
+            height: calc(#{$planet-orbit-diameter} * 3);
+            animation: earth 34s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--mars {
+            width: calc(#{$planet-orbit-diameter} * 3.5);
+            height: calc(#{$planet-orbit-diameter} * 3.5);
+            animation: mars 62s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--jupiter {
+            width: calc(#{$planet-orbit-diameter} * 4);
+            height: calc(#{$planet-orbit-diameter} * 4);
+            animation: jupiter 80s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--saturn {
+            width: calc(#{$planet-orbit-diameter} * 4.5);
+            height: calc(#{$planet-orbit-diameter} * 4.5);
+            animation: saturn 100s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--uranus {
+            width: calc(#{$planet-orbit-diameter} * 5);
+            height: calc(#{$planet-orbit-diameter} * 5);
+            animation: uranus 120s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--neptune {
+            width: calc(#{$planet-orbit-diameter} * 5.5);
+            height: calc(#{$planet-orbit-diameter} * 5.5);
+            animation: neptune 140s infinite linear;
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+
+        &--pluto {
+            width: calc(#{$planet-orbit-diameter} * 6);
+            height: calc(#{$planet-orbit-diameter} * 6);
+            animation: pluto 160s infinite linear;
+            transform: translate(-50%, -50%) rotate(100deg);
+
+            a > span {
+                width: 2rem;
+                height: 2rem;
+                background: blue;
+            }
+        }
+    }
+}
