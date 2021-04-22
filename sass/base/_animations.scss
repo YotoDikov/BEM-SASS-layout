@@ -47,22 +47,27 @@
     0% {
         -moz-box-shadow: 0 0 0.2rem 0.2rem rgba(255, 105, 36, 0.5);
         box-shadow: 0 0 0.2rem 0.2rem rgba(255, 105, 36, 0.5);
+        transform: translate(-50%, -50%) scale(1);
     }
     25% {
         -moz-box-shadow: 0 0 0.4rem 0.4rem rgba(255, 105, 36, 0.4);
         box-shadow: 0 0 0.4rem 0.4rem rgba(255, 105, 36, 0.4);
+        transform: translate(-50%, -50%) scale(1.02);
     }
     50% {
         -moz-box-shadow: 0 0 0.6rem 0.6rem rgba(255, 105, 36, 0.4);
         box-shadow: 0 0 0.6rem 0.6rem rgba(255, 105, 36, 0.4);
+        transform: translate(-50%, -50%) scale(1.05);
     }
     75% {
         -moz-box-shadow: 0 0 0.8rem 0.8rem rgba(255, 105, 36, 0.4);
         box-shadow: 0 0 0.6rem 0.8rem rgba(255, 105, 36, 0.4);
+        transform: translate(-50%, -50%) scale(1.02);
     }
     100% {
         -moz-box-shadow: 0 0 1rem 1rem rgba(255, 105, 36, 0.3);
         box-shadow: 0 0 1rem 1rem rgba(255, 105, 36, 0.3);
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 

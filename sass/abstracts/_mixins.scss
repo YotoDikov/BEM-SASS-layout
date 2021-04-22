@@ -6,6 +6,12 @@
     }
 }
 
+@mixin square {
+    content: '';
+    display: block;
+    padding: 50%;
+}
+
 @mixin absoluteCenter {
     position: absolute;
     top: 50%;

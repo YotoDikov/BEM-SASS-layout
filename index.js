@@ -11,7 +11,6 @@ function getElementPosition(el) {
 }
 
 function main () {
-    
     const windowCenter = window.innerWidth / 2;
     let timelineTranslatedX = 0;
     let currentSelectedElement = '';
