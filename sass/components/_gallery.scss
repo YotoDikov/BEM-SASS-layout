@@ -1,7 +1,7 @@
 .gallery {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 1px;
     background-color: gray;
 
@@ -26,7 +26,7 @@
         &::after {
             @include absoluteCenter; 
             @include square;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(50, 50, 50, 0.4);
             z-index: 10;
         }
     }
@@ -36,7 +36,7 @@
         &::after {
             @include absoluteCenter; 
             @include square;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(40, 40, 40, 0.3);
             z-index: 10;
         }
     }
