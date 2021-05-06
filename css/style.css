@@ -595,3 +595,8 @@ a {
   background-color: white;
   border-top: 6px solid gray;
   overflow: hidden; }
+
+.section-news {
+  height: 100vh;
+  max-width: 100%;
+  background: green; }
